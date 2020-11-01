@@ -26,3 +26,8 @@ const getHeroes = async () => {
     console.error(error);
   }
 }
+
+
+export {
+  getHeroes
+}
