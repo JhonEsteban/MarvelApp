@@ -5,6 +5,57 @@
 }
 
 
+:root {
+  --mainBackgroundOne:  #3f49a9;
+  --mainBackgroundTwo:  #711d32;
+  --mainColorTitle: #dcd2d4;
+  --mainShadowTitle: #000000c2;
+  
+  
+  --hoverInput:  #dfcbd1;
+  --hoverTransition:  all .5s;
+  --hoverTitle: rgb(40, 57, 93);
+
+  --paddingSize: 20px;
+} 
+
+
 body {
+  margin: 0;
+  font-size: 17px;
   font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, var(--mainBackgroundOne), var(--mainBackgroundTwo));
+}
+
+
+.main {
+  text-align: center;
+}
+
+.main-title {
+  color: var(--mainColorTitle);
+  text-shadow: 0 0 5px var(--mainShadowTitle); 
+  transition: var(--hoverTransition);
+}
+
+.main-title:hover {
+  text-shadow: 0 0 20px var(--hoverTitle);
+}
+
+.wrapper {
+  padding-right: var(--paddingSize);
+  padding-left: var(--paddingSize);
+}
+
+.input__search {
+  border: none;
+  padding: .5rem  3.8rem;
+  text-align: center;
+  font-size: .9rem;
+  border-radius: 10px;
+  transition: var(--hoverTransition);
+}
+
+.input__search:focus {
+  box-shadow: 0 0 5px var(--hoverInput);
 }
