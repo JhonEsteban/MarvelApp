@@ -57,5 +57,6 @@ body {
 }
 
 .input__search:focus {
+  outline: none;
   box-shadow: 0 0 5px var(--hoverInput);
 }
