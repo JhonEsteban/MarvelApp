@@ -60,3 +60,41 @@ body {
   outline: none;
   box-shadow: 0 0 5px var(--hoverInput);
 }
+
+
+.marvel-layout {
+  display: grid;
+  gap: 2.2em;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr) );
+  margin-top: 30px;
+}
+
+.card-hero img {
+  max-width: 100%;
+}
+
+.card-hero {
+  background-color: #ccc6e2;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px #dfd0d0;
+  transition: var(--hoverTransition);
+}
+
+.card-hero:hover {
+  box-shadow: 0px 0px 14px #dfd0d0;
+  cursor: pointer;
+}
+
+
+.card-name-top {
+  background-color: #bcbcea;
+  color: #000000cc;
+  border-radius: 30px 30px 5px 5px;
+  box-shadow: 0px 0px 3px #c0cce2;
+  transition: var(--hoverTransition);
+}
+
+.card-hero:hover  .card-name-top{
+  box-shadow: 0px 0px 14px #e7dfdf;
+}
