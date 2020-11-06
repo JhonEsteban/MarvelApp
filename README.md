@@ -1,16 +1,20 @@
-# MarvelApp
+# MarvelApp 🤖🦸‍♂
 
-Mini aplicación de Marvel que muestra algunos de sus personajes, además contiene un buscador para encontrar tu héroe favorito.
+Marvel hero mini App, shows some superheroes and allows you to search for your favorite with a search engine.
 
 
-## Recursos usados
+## Desktop design
+
+![Desktop design](images/design.jpg)
+
+## Resources used 🧑‍🔧
 1. [Marvel API](https://developer.marvel.com/)
 2. [Md5 Hash Gnerator](https://www.md5hashgenerator.com/)
 3. [Google Fonts](https://fonts.google.com/)
 
 
-### Redes Sociales
+### Social networks👋
 
-* [Twitter](https://www.twitter.com "Mi perfil")
+* [Twitter](https://www.twitter.com "My twitter")
 
-* [Linkedin](https://www.linkedin.com "Mi perfil")
+* [Linkedin](https://www.linkedin.com "My linkedin")
