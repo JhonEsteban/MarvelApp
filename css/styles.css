@@ -98,3 +98,8 @@ body {
 .card-hero:hover  .card-name-top{
   box-shadow: 0px 0px 14px #e7dfdf;
 }
+
+.error-text {
+  color: #fff;
+  text-shadow: 0 0 4px 2px #000;
+}

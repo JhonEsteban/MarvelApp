@@ -24,8 +24,18 @@ const getHeroes = async () => {
 
   } catch (error) {
     console.error(error);
+    showError(error);
   }
 }
+
+
+const showError = (error) => {
+  let message = error.statusTesst || 'No se puedo realizar la petición :-(';
+  content.innerHTML = `
+  <h2 class="error-text"> Error: ${error.status} - 
+  <span class="error">${message}</span> </h2>`;
+}
+
 
 
 export {
