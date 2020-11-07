@@ -28,6 +28,31 @@ const getHeroes = async () => {
   }
 }
 
+const searchHeroes = async (query) => {
+
+  try {
+
+    const heroe = encodeURIComponent(query).toLowerCase();
+
+    const marvelUrl = `${urlBase}/characters?name=${heroe}&ts=1&apikey=${publicKey}&hash=${hash}`;
+
+
+    const resp = await fetch(marvelUrl);
+
+
+    if (!resp.ok) throw {
+      status: resp.status,
+      status: resp.statusText
+    }
+
+    return await resp.json();
+
+  } catch (error) {
+    console.log(error);
+    showError(error);
+  }
+
+}
 
 const showError = (error) => {
   let message = error.statusTesst || 'No se puedo realizar la petición :-(';
@@ -39,5 +64,6 @@ const showError = (error) => {
 
 
 export {
-  getHeroes
+  getHeroes,
+  searchHeroes
 }
