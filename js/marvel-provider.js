@@ -1,10 +1,12 @@
 const publicKey = 'bdaabd1f0b1fc9d1ae88285875f5a3cf';
 const hash = '7151488404ea3cebd5fe95b07328db79';
 const urlBase = 'https://gateway.marvel.com/v1/public';
-
+const heroContainer = document.getElementById('content');
 
 const getHeroes = async () => {
   try {
+
+    heroContainer.innerHTML = `<img src="../images/loader.svg" class="loader">`;
 
     const marvelUrl = `${urlBase}/characters?ts=1&apikey=${publicKey}&hash=${hash}`;
 
@@ -17,6 +19,7 @@ const getHeroes = async () => {
       }
     }
 
+    heroContainer.innerHTML = '';
     return await resp.json();
 
   } catch (error) {
@@ -28,6 +31,8 @@ const getHeroes = async () => {
 
 const searchHeroes = async (query) => {
   try {
+
+    heroContainer.innerHTML = `<img src="../images/loader.svg" class="loader">`;
 
     const heroe = encodeURIComponent(query).toLowerCase();
 
@@ -42,6 +47,7 @@ const searchHeroes = async (query) => {
       }
     }
 
+    heroContainer.innerHTML = '';
     return await resp.json();
 
   } catch (error) {

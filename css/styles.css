@@ -106,3 +106,7 @@ body {
   color: #fff;
   text-shadow: 0 0 4px 2px #000;
 }
+
+.loader {
+  margin: 100px auto;
+}
