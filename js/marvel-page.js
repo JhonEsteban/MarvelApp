@@ -1,6 +1,7 @@
-import { getHeroes } from "./marvel-provider.js";
+import { getHeroes, searchHeroes } from "./marvel-provider.js";
 
 const heroContainer = document.getElementById('content');
+const inputSearch = document.getElementById('search');
 
 
 const createHeroTemplate = (heroe) => {
@@ -24,7 +25,6 @@ const createHeroTemplate = (heroe) => {
 }
 
 
-
 const renderHeroes = (heroes) => {
 
   for (let heroe of heroes) {
@@ -34,13 +34,31 @@ const renderHeroes = (heroes) => {
 
 
 
+const searchHeroe = async (event) => {
+
+  let key = event.key || event.keyCode;
+
+  if (key === 13 || key === 'Enter' && inputSearch.value.length > 0) {
+
+    const { data: { results } } = await searchHeroes(inputSearch.value);
+    drawSearchHeroes(results);
+
+    inputSearch.value = '';
+  }
+}
 
 
+const drawSearchHeroes = (heroes) => {
+
+  for (let heroe of heroes) {
+    heroContainer.innerHTML = createHeroTemplate(heroe);
+  }
+}
 
 export const init = async () => {
 
   const { data: { results } } = await getHeroes();
   renderHeroes(results);
 
-  console.log(results);
+  inputSearch.addEventListener('keyup', searchHeroe);
 }

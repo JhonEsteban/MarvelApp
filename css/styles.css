@@ -74,6 +74,9 @@ body {
 }
 
 .card-hero {
+  max-width: 365px;
+  margin-left: auto;
+  margin-right: auto;
   background-color: #ccc6e2;
   padding: 15px;
   border-radius: 10px;
