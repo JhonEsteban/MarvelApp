@@ -25,15 +25,6 @@ const createHeroTemplate = (heroe) => {
 }
 
 
-const renderHeroes = (heroes) => {
-
-  for (let heroe of heroes) {
-    heroContainer.innerHTML += createHeroTemplate(heroe);
-  }
-}
-
-
-
 const searchHeroe = async (event) => {
 
   let key = event.key || event.keyCode;
@@ -41,19 +32,38 @@ const searchHeroe = async (event) => {
   if (key === 13 || key === 'Enter' && inputSearch.value.length > 0) {
 
     const { data: { results } } = await searchHeroes(inputSearch.value);
-    drawSearchHeroes(results);
+    renderHeroes(results);
 
     inputSearch.value = '';
   }
 }
 
 
-const drawSearchHeroes = (heroes) => {
+const renderHeroes = (results) => {
 
-  for (let heroe of heroes) {
-    heroContainer.innerHTML = createHeroTemplate(heroe);
+  if (results.length > 1) {
+
+    for (let heroe of results) {
+      heroContainer.innerHTML += createHeroTemplate(heroe);
+    }
+
+  } else if (results.length === 1) {
+
+    for (let heroe of results) {
+      heroContainer.innerHTML = createHeroTemplate(heroe);
+    }
+
+  } else {
+    heroContainer.innerHTML = `
+    <strong class="error-termino">
+      No hay héroes con el termino de busqueda:
+      <span class="termino">${inputSearch.value}</span>
+    </strong>`;
   }
+
 }
+
+
 
 export const init = async () => {
 

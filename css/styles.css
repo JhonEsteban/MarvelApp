@@ -110,3 +110,12 @@ body {
 .loader {
   margin: 100px auto;
 }
+
+
+.error-termino {
+  color: #fff;
+}
+
+.termino {
+  color: #300a5d;
+}
