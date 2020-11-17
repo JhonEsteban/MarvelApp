@@ -6,7 +6,7 @@ const heroContainer = document.getElementById('content');
 const getHeroes = async () => {
   try {
 
-    heroContainer.innerHTML = `<img src="../images/loader.svg" class="loader">`;
+    heroContainer.innerHTML = `<span class="loader"><span class="loader-inner"></span></span>`;
 
     const marvelUrl = `${urlBase}/characters?ts=1&apikey=${publicKey}&hash=${hash}`;
 
@@ -32,7 +32,7 @@ const getHeroes = async () => {
 const searchHeroes = async (query) => {
   try {
 
-    heroContainer.innerHTML = `<img src="../images/loader.svg" class="loader">`;
+    heroContainer.innerHTML = `<span class="loader"><span class="loader-inner"></span></span>`;
 
     const heroe = encodeURIComponent(query).toLowerCase();
 
