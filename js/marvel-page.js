@@ -55,10 +55,13 @@ const renderHeroes = (results) => {
 
   } else {
     heroContainer.innerHTML = `
-    <strong class="error-termino">
-      No hay héroes con el termino de busqueda:
-      <span class="termino">${inputSearch.value}</span>
-    </strong>`;
+      <div class="error-container">
+        <strong class="error-termino">
+        No hay héroes con el termino de busqueda:
+        <span class="termino">${inputSearch.value}</span>
+      </strong>
+        <a href="index.html" class="btn-return">Regresar</a>
+      </div>`;
   }
 
 }
