@@ -19,7 +19,8 @@ const createHeroTemplate = (heroe) => {
       <img src="${image}" class="img" >
     </div>
 
-  </div>`;
+  </div>
+  `;
 
   return template;
 }
@@ -57,9 +58,9 @@ const renderHeroes = (results) => {
     heroContainer.innerHTML = `
       <div class="error-container">
         <strong class="error-termino">
-        No hay héroes con el termino de busqueda:
-        <span class="termino">${inputSearch.value}</span>
-      </strong>
+          No hay héroes con el termino de busqueda:
+          <span class="termino">${inputSearch.value}</span>
+        </strong>
         <a href="index.html" class="btn-return">Regresar</a>
       </div>`;
   }

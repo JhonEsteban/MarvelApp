@@ -48,6 +48,7 @@ body {
 }
 
 .input__search {
+  max-width: 270px;
   border: none;
   padding: .5rem  3.8rem;
   text-align: center;
@@ -185,7 +186,7 @@ body {
 
 
 .error-container {
-  width: 400px; 
+  width: 237px; 
   margin: 0 auto;
   text-align: center;
   display: flex;
